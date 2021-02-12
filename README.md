@@ -9,4 +9,13 @@ E ver quais requisições podem ser feitas por: https://movies-api-web.herokuapp
 
 A API se encontra aberta para novas funcionalidades, podemos adicionar e/ou trocar quantos banco de dados quiseremos já que utilizei o Repository Pattern.
 
+
+FUNCIONALIDADES
+
+Adicionar filme
+Atualizar filme
+Remover filme por ID
+Listar filme por ID
+Listar todos os filmes
+
 *O método de atualização de filme pode ser usado para a avaliação do mesmo*
