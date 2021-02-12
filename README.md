@@ -1,4 +1,4 @@
-Essa API foi utilizada usando o padrão REST, que define algumas regras para o desenvolvimento de serviços web.
+Essa API foi desenvolvida a partir do padrão REST, que define algumas regras para o desenvolvimento de serviços web.
 
 Tentei utilizar os principios SOLID, para isto escolhi o Nest, pois ele tem injeção de depedência e assim consigo utilizar o principio de LISKOV. Em cada caso de uso/operação eu criei um serviço para seguir o principio de responsabilidade unica e o principio de aberto/fechado.
 
