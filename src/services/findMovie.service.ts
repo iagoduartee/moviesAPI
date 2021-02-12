@@ -10,6 +10,9 @@ export class FindMovieByIdService {
 
     async execute(id: number): Promise<MovieEntity> {
         const movie = await this.moviesRepository.findById(id);
+        if (!movie) {
+            throw new BadRequestException('Movie does not exists');
+        }
         return movie;
     }
 }

@@ -8,7 +8,6 @@ export class FakeMoviesRepository implements MoviesRepository {
 
     async findById(id: number): Promise<MovieEntity | undefined> {
         const entity = this.entities.find((search) => search.id === id);
-        console.log(entity);
         return entity ? { ...entity } : undefined;
     }
 

@@ -1,5 +1,6 @@
 import { CreateMovieDTO } from '@dtos/createMovie.dto';
 import { UpdateMovieDTO } from '@dtos/updateMovie.dto';
+import { MovieEntity } from '@entities/movie.entity';
 import {
     Body,
     Controller,
@@ -26,19 +27,19 @@ export class MovieController {
     ) {}
 
     @Get()
-    async FindAllService() {
+    async FindAllService(): Promise<MovieEntity[]> {
         const moviesList = await this.findAllService.execute();
         return moviesList;
     }
 
     @Post()
-    async createMovie(@Body() data: CreateMovieDTO) {
+    async createMovie(@Body() data: CreateMovieDTO): Promise<MovieEntity> {
         const savedMovie = await this.createMovieService.execute(data);
         return savedMovie;
     }
 
     @Put()
-    async updateMovie(@Param() id: number, @Body() data: UpdateMovieDTO) {
+    async updateMovie(@Body() data: UpdateMovieDTO): Promise<MovieEntity> {
         const updatedMovie = await this.updateMovieService.execute(data);
         return updatedMovie;
     }
@@ -49,7 +50,7 @@ export class MovieController {
     }
 
     @Get(':id')
-    async findById(@Param('id') id: number) {
+    async findById(@Param('id') id: number): Promise<MovieEntity> {
         const movie = await this.findMovieById.execute(Number(id));
         return movie;
     }
