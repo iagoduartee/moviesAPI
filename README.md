@@ -8,3 +8,5 @@ Você pode acessar a aplicação por: https://movies-api-web.herokuapp.com
 E ver quais requisições podem ser feitas por: https://movies-api-web.herokuapp.com/doc/
 
 A API se encontra aberta para novas funcionalidades, podemos adicionar e/ou trocar quantos banco de dados quiseremos já que utilizei o Repository Pattern.
+
+*O método de atualização de filme pode ser usado para a avaliação do mesmo*
