@@ -24,8 +24,6 @@ async function bootstrap() {
 
     app.useGlobalPipes(new ValidationPipe());
 
-    await app.listen(process.env.PORT || 3000);
-
     const config = new DocumentBuilder()
         .setTitle('Movie API')
         .setDescription('Esta API foi criada para teste tecnico de estagio.')
@@ -33,5 +31,7 @@ async function bootstrap() {
         .build();
     const document = SwaggerModule.createDocument(app, config);
     SwaggerModule.setup('doc', app, document);
+
+    await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
