@@ -13,9 +13,13 @@ A API se encontra aberta para novas funcionalidades, podemos adicionar e/ou troc
 FUNCIONALIDADES
 
 Adicionar filme.
+
 Atualizar filme.
+
 Remover filme por ID.
+
 Listar filme por ID.
+
 Listar todos os filmes.
 
 *O método de atualização de filme pode ser usado para a avaliação do mesmo*
