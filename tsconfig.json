@@ -16,7 +16,8 @@
       "@dtos/*" : ["src/dtos/*"],
       "@config/*" : ["src/config/*"],
       "@entities/*" : ["src/entities/*"],
-      "@controllers/*" : ["src/controllers/*"]
+      "@controllers/*" : ["src/controllers/*"],
+      "@repositories/*" : ["src/repositories/*"]
     },
     "typeRoots": [
       "node_modules/@types",

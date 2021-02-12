@@ -1,14 +1,14 @@
-import { CreateMovieDTO } from 'src/dtos/createMovie.dto';
-import { UpdateMovieDTO } from 'src/dtos/updateMovie.dto';
-import { MovieEntity } from 'src/entities/movie.entity';
-import { MoviesRepository } from '../movies.repository';
+import { CreateMovieDTO } from '@dtos/createMovie.dto';
+import { UpdateMovieDTO } from '@dtos/updateMovie.dto';
+import { MovieEntity } from '@entities/movie.entity';
+import { MoviesRepository } from '@repositories/movies.repository';
 
 export class FakeMoviesRepository implements MoviesRepository {
     private entities: MovieEntity[] = [];
 
     async findById(id: number): Promise<MovieEntity | undefined> {
         const entity = this.entities.find((search) => search.id === id);
-
+        console.log(entity);
         return entity ? { ...entity } : undefined;
     }
 
@@ -39,15 +39,21 @@ export class FakeMoviesRepository implements MoviesRepository {
     }
 
     async delete(id: number): Promise<void> {
+        console.log(id);
         const indexOfEntity = this.entities.findIndex(
             (search) => search.id === id,
         );
-
+        console.log(this.entities);
+        console.log(indexOfEntity);
         if (indexOfEntity < 0) {
             return;
         }
 
         this.entities.splice(indexOfEntity, 1);
+    }
+
+    async findAll(): Promise<MovieEntity[]> {
+        return [...this.entities];
     }
 
     private generateNumberId(): number {

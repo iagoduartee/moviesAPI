@@ -1,14 +1,21 @@
+import {
+    IsDefined,
+    IsNumber,
+    isNumber,
+    IsString,
+    isString,
+} from 'class-validator';
 import { CategoryEnum } from 'src/entities/category.enum';
 import { MovieEntity } from 'src/entities/movie.entity';
 
-export class UpdateMovieDTO implements MovieEntity {
+export class UpdateMovieDTO {
     id: number;
 
-    name: string;
+    name?: string;
 
-    rate: number;
+    rate?: number;
 
     description?: string;
 
-    category: CategoryEnum;
+    category?: CategoryEnum;
 }
